@@ -1,0 +1,27 @@
+function hw8_sh()
+%HW8_SH 
+
+I = imread( '../dat/lena.bmp' );
+I = double( I );
+[row, col] = size(I);
+
+N = colorednoise( 'white', col );
+
+ampletude = 10;
+IN = I + ampletude*(N-mean(N(:)));
+IN = uint8(IN);
+imwrite( IN, '../out/lena_gaussian10.png' );
+
+ampletude = 30;
+IN = I + ampletude*(N-mean(N(:)));
+IN = uint8(IN);
+imwrite( IN, '../out/lena_gaussian30.png' );
+
+threshold = 0.5;
+for n = 1:row
+    for m = 1:
+%IN = uint8(IN);
+imwrite( IN, '../out/lena_bw005.png' );
+
+end
+

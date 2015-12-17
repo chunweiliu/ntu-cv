@@ -1,0 +1,9 @@
+function upsideDown_b_img = upsideDown( b_img )
+%UPSIDE-DOWN an input binary image
+[r, c] = size(b_img);
+upsideDown_b_img = zeros(r, c);
+for n = 1:r
+    upsideDown_b_img(n, :) = b_img(r-n+1, :);
+end
+
+imshow(upsideDown_b_img);
